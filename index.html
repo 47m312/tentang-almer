@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Almer | Almer Adzana Saputra</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B192C',
+                            900: '#030712',
+                            950: '#02040a',
+                        },
+                        gold: {
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#CA8A04',
+                        },
+                        electric: {
+                            500: '#3B82F6',
+                            600: '#2563EB',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.4);
+        }
+        .glow-gold {
+            box-shadow: 0 0 25px -5px rgba(234, 179, 8, 0.4);
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-nav {
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-electric-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <a href="#home" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-electric-600 to-gold-400 p-0.5 transition-transform group-hover:scale-105">
+                        <div class="w-full h-full bg-navy-900 rounded-[10px] flex items-center justify-center font-display font-bold text-gold-400">
+                            A
+                        </div>
+                    </div>
+                    <span class="font-display font-bold text-lg sm:text-xl tracking-tight text-white">
+                        Almer<span class="text-gold-400">.</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#tentang" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">Tentang Saya</a>
+                    <a href="#minat" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">Keahlian</a>
+                    <a href="#prestasi" class="text-sm font-medium text-slate-300 hover:text-gold-400 transition-colors">Prestasi</a>
+                    <a href="#kontak" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-gradient-to-r from-electric-600 to-blue-500 text-white hover:from-electric-500 hover:to-blue-400 transition-all shadow-lg shadow-electric-600/30">
+                        Hubungi Almer
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none" aria-label="Menu">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#tentang" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/50">Tentang Saya</a>
+            <a href="#minat" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/50">Keahlian</a>
+            <a href="#prestasi" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/50">Prestasi</a>
+            <a href="#kontak" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gold-400 font-semibold bg-gold-400/10">Hubungi Almer</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-28 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-grid-pattern">
+        <!-- Radial gradient background glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-electric-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-gold-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 mb-6 text-xs sm:text-sm text-gold-400 font-medium">
+                        <span class="flex h-2 w-2 rounded-full bg-gold-400 animate-ping"></span>
+                        <span>Siswa Berprestasi SDIT Insan Kamil Sidoarjo</span>
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+                        Halo! Saya <br class="hidden sm:inline" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-electric-500 to-gold-400">
+                            Almer Adzana Saputra
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Siswa Kelas 6 SDIT Insan Kamil Sidoarjo yang mencintai ilmu matematika, aktif sebagai penjaga gawang (kiper) di tim sepak bola sekolah, serta gemar mengukir prestasi di berbagai bidang.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <a href="#prestasi" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-slate-900 bg-gold-400 hover:bg-gold-500 transition-all shadow-lg glow-gold text-center">
+                            <i class="fa-solid fa-trophy mr-2"></i> Lihat Prestasi
+                        </a>
+                        <a href="#kontak" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all text-center">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Kontak Saya
+                        </a>
+                    </div>
+
+                    <!-- Quick Info Badges -->
+                    <div class="mt-10 pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-left">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-electric-500/10 border border-electric-500/20 flex items-center justify-center text-electric-500 shrink-0">
+                                <i class="fa-solid fa-calendar-day"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Lahir</div>
+                                <div class="text-sm font-semibold text-slate-200">24 Juli 2014</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-400 shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Kota</div>
+                                <div class="text-sm font-semibold text-slate-200">Sidoarjo</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 col-span-2 sm:col-span-1">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Sekolah</div>
+                                <div class="text-sm font-semibold text-slate-200">SDIT Insan Kamil</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Avatar -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                <!-- Hero Graphic Avatar / Photo -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Background Glow Ring -->
+                        <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-electric-600 to-gold-400 blur-xl opacity-40 animate-pulse"></div>
+                        
+                        <!-- Main Card -->
+                        <div class="relative rounded-3xl glass-card p-6 border border-slate-700/50 glow-effect text-center">
+                            <!-- Profile Photo Box -->
+                            <div class="w-48 h-48 mx-auto rounded-2xl bg-gradient-to-b from-slate-800 to-navy-900 border-4 border-gold-400 p-1 relative shadow-lg mb-6 overflow-hidden">
+                                <img src="IMG_20260725_182421.jpg" alt="Almer Adzana Saputra" class="w-full h-full object-cover rounded-xl object-top transition-transform duration-500 hover:scale-105" onerror="this.src='https://placehold.co/400x400/0B192C/FACC15?text=Almer+Adzana'">
+                                <!-- Floating Badge -->
+                                <div class="absolute bottom-2 right-2 bg-electric-600 text-white p-2.5 rounded-full shadow-lg border-2 border-navy-900" title="Kiper Utama & Jago Matematika">
+                                    <i class="fa-solid fa-shield-halved text-base"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="font-display font-bold text-2xl text-white">Almer Adzana Saputra</h3>
+                            <p class="text-sm text-gold-400 font-semibold mb-4">Siswa Kelas 6 SDIT Insan Kamil</p>
+
+                            <div class="flex justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-slate-800 text-xs font-semibold rounded-full text-slate-300 border border-slate-700">
+                                    <i class="fa-solid fa-calculator text-electric-500 mr-1"></i> Numerasi
+                                </span>
+                                <span class="px-3 py-1 bg-slate-800 text-xs font-semibold rounded-full text-slate-300 border border-slate-700">
+                                    <i class="fa-solid fa-futbol text-emerald-400 mr-1"></i> Kiper Futsal
+                                </span>
+                            </div>
+
+                            <div class="bg-navy-950/80 rounded-xl p-4 border border-slate-800 text-xs text-slate-300 text-left">
+                                <p class="italic text-slate-400">"Berjuang gigih di lapangan, berpikir cerdas di ruang kelas. Selalu siap berprestasi untuk membanggakan sekolah dan keluarga!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Skills & Expertise Section -->
+    <section id="minat" class="py-20 bg-navy-900 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-gold-400 font-bold mb-2">Keahlian & Passion</h2>
+                <p class="font-display text-3xl sm:text-4xl font-bold text-white">Dua Bidang Keunggulan Almer</p>
+                <div class="w-16 h-1 bg-gradient-to-r from-electric-500 to-gold-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Skill 1: Matematika -->
+                <div class="glass-card rounded-2xl p-8 border border-slate-800 hover:border-electric-500/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-electric-600/10 border border-electric-500/30 flex items-center justify-center text-electric-500 mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-square-root-variable text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-white mb-3 flex items-center justify-between">
+                        <span>Bidang Matematika</span>
+                        <i class="fa-solid fa-award text-gold-400 text-xl"></i>
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Almer memiliki minat tinggi dalam pemecahan masalah numerasi dan logika matematika. Keahlian ini terbukti melalui berbagai raihan medali dan kompetisi olimpiade tingkat nasional.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-electric-500"></i> Peraih Gold Medal IKMC 2026
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-electric-500"></i> Terbaik 2 Try Out Numerasi Sekolah
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill 2: Goalkeeper / Futsal -->
+                <div class="glass-card rounded-2xl p-8 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hands-holding-circle text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-white mb-3 flex items-center justify-between">
+                        <span>Penjaga Gawang (Kiper)</span>
+                        <i class="fa-solid fa-shield text-emerald-400 text-xl"></i>
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Sebagai penjaga gawang di tim inti sekolah SDIT Insan Kamil, Almer memiliki refleks cepat, komunikasi tim yang tangguh, dan keberanian tinggi untuk mengamankan gawang dari serangan lawan.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> Juara 1 Futsal FORFEO 2025
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> Juara 2 Futsal Walisongo 2026
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="prestasi" class="py-20 bg-navy-950 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs uppercase tracking-widest text-gold-400 font-bold mb-2">Rekam Jejak & Keberhasilan</h2>
+                <p class="font-display text-3xl sm:text-4xl font-bold text-white">Daftar Prestasi Almer</p>
+                <div class="w-16 h-1 bg-gradient-to-r from-electric-500 to-gold-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="filter-buttons">
+                <button data-filter="all" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-gold-400 text-slate-900 shadow-md">
+                    Semua (12)
+                </button>
+                <button data-filter="akademik" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">
+                    <i class="fa-solid fa-book-bookmark mr-1 text-electric-500"></i> Akademik & Matematika
+                </button>
+                <button data-filter="olahraga" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">
+                    <i class="fa-solid fa-futbol mr-1 text-emerald-400"></i> Olahraga & Futsal
+                </button>
+                <button data-filter="keagamaan" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">
+                    <i class="fa-solid fa-mosque mr-1 text-purple-400"></i> Keagamaan / Tahfidz
+                </button>
+            </div>
+
+            <!-- Achievement Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="achievements-grid">
+                
+                <!-- Card 1 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-gold-400/60 transition-all duration-300" data-category="akademik">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold-400/10 text-gold-400 border border-gold-400/30">2026</span>
+                        <div class="w-10 h-10 rounded-full bg-gold-400/20 text-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-medal text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Gold Medal IKMC 2026</h3>
+                    <p class="text-xs text-slate-400">Raihan Medali Emas dalam ajang International Kangaroo Mathematics Contest (IKMC) tahun 2026.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-electric-500/60 transition-all duration-300" data-category="akademik">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-electric-500/10 text-electric-400 border border-electric-500/30">Akademik</span>
+                        <div class="w-10 h-10 rounded-full bg-electric-500/20 text-electric-400 flex items-center justify-center">
+                            <i class="fa-solid fa-chart-line text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Terbaik 2 Try Out Numerasi</h3>
+                    <p class="text-xs text-slate-400">Peringkat Terbaik ke-2 dalam simulasi Try Out Numerasi di SDIT Insan Kamil Sidoarjo.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-purple-500/60 transition-all duration-300" data-category="keagamaan">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/30">2026</span>
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center">
+                            <i class="fa-solid fa-star text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Peserta Termumtaz Tahfidz Camp</h3>
+                    <p class="text-xs text-slate-400">Meraih predikat Istimewa/Termumtaz dalam kegiatan Tahfidz Camp Masjid An-Nur tahun 2026.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/60 transition-all duration-300" data-category="olahraga">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">2026</span>
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                            <i class="fa-solid fa-person-running text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Finisher 3K Mangrove Eco Run</h3>
+                    <p class="text-xs text-slate-400">Berhasil menyelesaikan rute lari 3 Kilometer di Mangrove Eco Run Surabaya tahun 2026.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/60 transition-all duration-300" data-category="olahraga">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">2026</span>
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                            <i class="fa-solid fa-person-running text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Finisher 5K Mangrove Eco Run</h3>
+                    <p class="text-xs text-slate-400">Menuntaskan tantangan lari 5 Kilometer dalam ajang Mangrove Eco Run tahun 2026.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/60 transition-all duration-300" data-category="olahraga">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">2026</span>
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                            <i class="fa-solid fa-trophy text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Juara 2 Futsal Walisongo</h3>
+                    <p class="text-xs text-slate-400">Meraih Runner-Up (Juara 2) turnamen Futsal Walisongo tahun 2026 sebagai Kiper Tim Utama.</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-purple-500/60 transition-all duration-300" data-category="keagamaan">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/30">2025</span>
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center">
+                            <i class="fa-solid fa-brain text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Harapan 3 LCC KKG PAI 2025</h3>
+                    <p class="text-xs text-slate-400">Juara Harapan 3 Lomba Cerdas Cermat (LCC) pada kompetisi KKG PAI tahun 2025.</p>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-purple-500/60 transition-all duration-300" data-category="keagamaan">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/30">Keagamaan</span>
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center">
+                            <i class="fa-solid fa-quran text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Terbaik 1 Munaqosyah Ummi</h3>
+                    <p class="text-xs text-slate-400">Peserta Terbaik ke-1 dalam evaluasi/munaqosyah kelancaran dan ketepatan bacaan Metode Ummi.</p>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/60 transition-all duration-300" data-category="olahraga">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">2025</span>
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                            <i class="fa-solid fa-trophy text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Juara 1 Futsal FORFEO 2025</h3>
+                    <p class="text-xs text-slate-400">Membawa tim meraih Podium Pertama (Juara 1) pada Turnamen Futsal FORFEO tahun 2025.</p>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-gold-400/60 transition-all duration-300" data-category="akademik">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold-400/10 text-gold-400 border border-gold-400/30">2019</span>
+                        <div class="w-10 h-10 rounded-full bg-gold-400/20 text-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-ribbon text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Siswa Terbaik 1 Kelas PG</h3>
+                    <p class="text-xs text-slate-400">Terpilih sebagai Siswa Terbaik ke-1 pada jenjang Playgroup (PG) tahun 2019.</p>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-gold-400/60 transition-all duration-300" data-category="akademik">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold-400/10 text-gold-400 border border-gold-400/30">2020</span>
+                        <div class="w-10 h-10 rounded-full bg-gold-400/20 text-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-ribbon text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Siswa Terbaik 1 Kelas TK A</h3>
+                    <p class="text-xs text-slate-400">Meraih predikat Siswa Terbaik ke-1 pada jenjang Taman Kanak-kanak (TK A) tahun 2020.</p>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="achievement-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-gold-400/60 transition-all duration-300" data-category="akademik">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold-400/10 text-gold-400 border border-gold-400/30">2021</span>
+                        <div class="w-10 h-10 rounded-full bg-gold-400/20 text-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-ribbon text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Siswa Terbaik 1 Kelas TK B</h3>
+                    <p class="text-xs text-slate-400">Meraih peringkat Siswa Terbaik ke-1 pada jenjang Taman Kanak-kanak (TK B) tahun 2021.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-20 bg-navy-900 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-700/60 relative overflow-hidden">
+                <!-- Background decoration -->
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-electric-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <h2 class="text-xs uppercase tracking-widest text-gold-400 font-bold mb-2">Mari Terhubung</h2>
+                    <p class="font-display text-3xl font-bold text-white">Hubungi Almer</p>
+                    <p class="text-slate-300 text-sm mt-2">
+                        Punya pertanyaan, ajakan tanding futsal, atau kolaborasi belajar? Silakan hubungi media sosial Almer di bawah ini.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Email Card -->
+                    <a href="mailto:adzanasaputraalmer24@gmail.com" class="flex flex-col items-center p-6 bg-navy-950/70 rounded-2xl border border-slate-800 hover:border-electric-500 transition-all hover:-translate-y-1 group">
+                        <div class="w-12 h-12 rounded-xl bg-electric-600/20 text-electric-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </div>
+                        <span class="text-xs text-slate-400 mb-1">Email Resmi</span>
+                        <span class="text-xs font-semibold text-slate-200 text-center break-all">adzanasaputraalmer24@gmail.com</span>
+                    </a>
+
+                    <!-- Instagram Card -->
+                    <a href="https://instagram.com/47m312_bs" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-navy-950/70 rounded-2xl border border-slate-800 hover:border-pink-500 transition-all hover:-translate-y-1 group">
+                        <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </div>
+                        <span class="text-xs text-slate-400 mb-1">Instagram</span>
+                        <span class="text-sm font-semibold text-slate-200">@47m312_bs</span>
+                    </a>
+
+                    <!-- TikTok Card -->
+                    <a href="https://tiktok.com/@47m312" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 bg-navy-950/70 rounded-2xl border border-slate-800 hover:border-teal-400 transition-all hover:-translate-y-1 group">
+                        <div class="w-12 h-12 rounded-xl bg-teal-400/20 text-teal-300 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </div>
+                        <span class="text-xs text-slate-400 mb-1">TikTok</span>
+                        <span class="text-sm font-semibold text-slate-200">@47m312</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-navy-950 border-t border-slate-800/80 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="text-xs text-slate-400">
+                &copy; 2026 <span class="text-white font-semibold">Almer Adzana Saputra</span>. SDIT Insan Kamil Sidoarjo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Achievement Category Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const achievementCards = document.querySelectorAll('.achievement-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update button active state
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-gold-400', 'text-slate-900', 'shadow-md');
+                    b.classList.add('bg-slate-800', 'text-slate-300');
+                });
+                btn.classList.remove('bg-slate-800', 'text-slate-300');
+                btn.classList.add('bg-gold-400', 'text-slate-900', 'shadow-md');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                achievementCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if(filterValue === 'all' || filterValue === category) {
+                        card.style.display = 'block';
+                        card.classList.add('animate-fadeIn');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
